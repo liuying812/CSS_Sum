@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+      body{
+        background:#ccc;
+      }
+      #yin-yang{
+        width:200px;
+        height:200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#050505 51%);
+        position:relative;
+
+		/* 加动画 */
+        animation-duration: 3s;
+  		animation-name: spin;
+  		animation-iteration-count:infinite;
+  		animation-timing-function:linear;
+      }
+
+      #yin-yang::before{
+      	content: '';
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        top:50px;
+        left:0px;
+        border: 40px solid black; /* 中间小圆点 */
+      }
+ 
+      #yin-yang::after{
+      	content: '';
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        background:#000;
+        position:absolute;
+        top:50px;
+        right:0px;
+        border: 40px solid #fff; /* 中间小圆点 */
+      }
+
+
+	/* 关键帧 */
+	@keyframes spin{
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+	p{
+		color: #fff;
+		text-align: center;
+	}
+    
+  </style>
+</head>
+<body>
+  <div id="yin-yang">
+  </div>
+
+   <p>道生一,一生二,二生三,三生万物</p>
+</body>
+</html>

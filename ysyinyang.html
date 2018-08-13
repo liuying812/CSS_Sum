@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+      body{
+        background:#ccc;
+      }
+      #yin-yang{
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#050505 51%);
+        position:relative;
+      }
+
+      #yin-yang .one{
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background:#000;
+        position:absolute;
+        top:50px;
+        left:0px;
+      }
+      #yin-yang .one .circle{
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        position:absolute;
+        left:40px;
+        top:40px;
+        background:#fff;
+      }
+
+      #yin-yang .two{
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        top:50px;
+        right:0px;
+      }
+
+      #yin-yang .two .circle{
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        position:absolute;
+        left:40px;
+        top:40px;
+        background:#000;
+      }
+  </style>
+</head>
+<body>
+  <div id="yin-yang">
+    <div class="one">
+      <div class="circle"></div> 
+    </div>
+    
+    <div class="two">
+      <div class="circle"></div>
+    </div>
+    
+  </div>
+</body>
+</html>
