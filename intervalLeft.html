@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>使用setInterval动起来</title>
+  <style>
+	.test{
+	  width:100px;
+	  height:100px;
+	  background: yellow;
+	}
+  </style>
+</head>
+<body>
+	<!-- 一秒钟运动的次数超过一定数量，人们视觉会认为它在不停的慢慢动， -->
+    <div class="test" id="test"></div>
+
+    <script>
+    	test.style.position = 'relative'
+    	test.style.left = 0
+
+    	var n = 0;
+    	var aa = setInterval(()=>{
+    	  n = n + 1
+    	  test.style.left = n + 'px'
+    	  if(n > 200){
+    	    window.clearInterval(aa)
+    	  }
+    	},40)
+
+    </script>
+</body>
+</html>
